@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    
+    
+}
+body{
+    background: rgb(255, 255, 255);
+}
+
+.to-do-list {
+    text-align: center;
+    margin-top: 100px;
+
+}
+h1{
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+}
+button{
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 5px 16px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+.Add-button{
+    background-color: rgb(64, 201, 64);
+}
+.Add-button:hover{
+    background-color: rgb(48, 160, 48);
+}
+.delete-btn{
+    background-color: rgb(202, 58, 58);
+}
+.delete-btn:hover{
+    background-color: rgb(167, 44, 44);
+}
+.move-btn{
+    background-color: rgb(44, 52, 158);
+}
+.move-btn:hover{
+    background-color: rgb(14, 34, 100);
+}
+.down-btn{
+    background-color: rgb(44, 52, 158);
+}
+.down-btn:hover{
+    background-color: rgb(14, 34, 100);
+}
+input[type="text"]{
+    font-size: 1.6rem;
+    padding: 5px 16px;
+    border: 2px solid rgb(233, 231, 231);
+    color: rgb(112, 112, 112);
+    margin: 0 10px;
+}
+input{
+    border-radius: 10px;
+}
+ol{
+    padding: 0;
+}
+li{
+    font-size: 25;
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgb(235, 235, 225);
+    margin-bottom: 10px;
+    border: 2px solid rgb(236, 230, 230);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin: 5px 20rem
+}
+.text{
+    flex: 1;
+    text-align: justify;
+}
+.delete-btn{
+    padding: 8px 12px;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+.move-btn{
+    padding: 8px 12px;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+.down-btn{
+    padding: 8px 12px;
+    font-size: 1rem;
+    margin-left: 10px;
+}
