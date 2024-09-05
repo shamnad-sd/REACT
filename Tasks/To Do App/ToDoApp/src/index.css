@@ -6,7 +6,7 @@
     
 }
 body{
-    background: rgb(255, 255, 255);
+    background: rgb(1, 5, 22);
 }
 
 .to-do-list {
@@ -16,12 +16,12 @@ body{
 }
 h1{
     font-size: 4rem;
-    color: rgb(0, 0, 0);
+    color: rgb(235, 235, 235);
 }
 button{
     font-size: 1.7rem;
     font-weight: bold;
-    padding: 5px 16px;
+    padding: 0px 16px;
     color: white;
     border: none;
     border-radius: 10px;
@@ -40,27 +40,20 @@ button{
 .delete-btn:hover{
     background-color: rgb(167, 44, 44);
 }
-.move-btn{
-    background-color: rgb(44, 52, 158);
-}
-.move-btn:hover{
-    background-color: rgb(14, 34, 100);
-}
-.down-btn{
-    background-color: rgb(44, 52, 158);
-}
-.down-btn:hover{
-    background-color: rgb(14, 34, 100);
-}
 input[type="text"]{
-    font-size: 1.6rem;
+    font-size: 20px;
     padding: 5px 16px;
-    border: 2px solid rgb(233, 231, 231);
-    color: rgb(112, 112, 112);
+    border: 2px solid rgb(193 193 193);
+    color: rgb(255, 255, 255);
     margin: 0 10px;
+    margin-bottom: 10px;
+    width: 29rem;
+    
 }
-input{
+input ,textarea{
     border-radius: 10px;
+    background-color: rgb(177, 177, 177);
+    
 }
 ol{
     padding: 0;
@@ -69,30 +62,54 @@ li{
     font-size: 25;
     font-weight: bold;
     padding: 10px;
-    background-color: rgb(235, 235, 225);
+    background-color: black;
     margin-bottom: 10px;
-    border: 2px solid rgb(236, 230, 230);
-    border-radius: 20px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
-    margin: 5px 20rem
+    margin: 5px 20rem;
+    padding-bottom: 9px;
+    display: grid;
 }
 .text{
     flex: 1;
     text-align: justify;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
 }
 .delete-btn{
     padding: 8px 12px;
     font-size: 1rem;
     margin-left: 10px;
 }
-.move-btn{
-    padding: 8px 12px;
-    font-size: 1rem;
-    margin-left: 10px;
+.to-do-list textarea{
+    font-size: 20px;
+    padding: 5px 16px;
+    border: 2px solid rgb(193 193 193);
+    color: rgb(255, 255, 255);
+    margin: 0 20px;
+    width: 29rem;
+    border-radius: 1rem;
 }
-.down-btn{
-    padding: 8px 12px;
-    font-size: 1rem;
-    margin-left: 10px;
+input[type="date"]{
+    font-size: 20px;
+    padding: 5px 16px;
+    border: 2px solid rgb(193 193 193);
+    color: rgb(255, 255, 255);
+    margin: 0 10px;
+    margin-bottom: 10px;
+    width: 29rem;
+    text-align: center;
+    font-size: 18px;
+}
+.description{
+    color: rgb(255, 255, 255);
+    margin-block-start: auto;
+    padding-bottom: 1.5rem;
+    
+
+}
+.due-date{
+    color: white;
 }

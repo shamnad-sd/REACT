@@ -1,0 +1,47 @@
+/* src/components/TaskItem.css */
+.task-item {
+  position: relative;
+  background-color: var(--bg-color-light);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid #444;
+  text-align: left;
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.task-item h3 {
+  margin: 0 0 10px;
+}
+
+.task-item p {
+  margin: 0 0 5px;
+}
+
+.task-item span {
+  color: var(--text-color-light);
+  font-size: 0.9rem;
+}
+
+.task-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}

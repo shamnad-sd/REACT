@@ -1,0 +1,42 @@
+/* src/components/TodayForm.css */
+.today-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: var(--bg-color-dark);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.today-form input,
+.today-form textarea {
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: var(--text-color-dark);
+  transition: all 0.3s ease;
+}
+
+.today-form input:focus,
+.today-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.today-form button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.today-form button:hover {
+  background-color: #218838;
+}

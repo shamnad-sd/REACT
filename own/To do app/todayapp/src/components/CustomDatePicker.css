@@ -1,0 +1,42 @@
+/* src/components/CustomDatePicker.css */
+.custom-date-picker {
+    position: relative;
+  }
+  
+  .custom-calendar {
+    background-color: var(--bg-color-light);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  
+  .date-picker-container {
+    position: relative;
+  }
+  
+  .date-picker-modal {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 100;
+    background-color: var(--bg-color-light);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .date-input {
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    color: var(--text-color-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .date-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
