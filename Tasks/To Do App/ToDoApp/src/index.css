@@ -6,17 +6,18 @@
     
 }
 body{
-    background: rgb(1, 5, 22);
+    
 }
 
 .to-do-list {
     text-align: center;
     margin-top: 100px;
+    
 
 }
 h1{
     font-size: 4rem;
-    color: rgb(235, 235, 235);
+    color: rgb(255, 255, 255);
 }
 button{
     font-size: 1.7rem;
@@ -29,13 +30,14 @@ button{
     transition: background-color 0.5s ease;
 }
 .Add-button{
-    background-color: rgb(64, 201, 64);
+    background-color: rgb(17, 55, 223);
+    padding: 0 13.5rem
 }
 .Add-button:hover{
-    background-color: rgb(48, 160, 48);
+    background-color: rgb(41, 62, 129);
 }
 .delete-btn{
-    background-color: rgb(202, 58, 58);
+    background-color: rgb(72, 223, 52);
 }
 .delete-btn:hover{
     background-color: rgb(167, 44, 44);
@@ -44,7 +46,7 @@ input[type="text"]{
     font-size: 20px;
     padding: 5px 16px;
     border: 2px solid rgb(193 193 193);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     margin: 0 10px;
     margin-bottom: 10px;
     width: 29rem;
@@ -52,7 +54,7 @@ input[type="text"]{
 }
 input ,textarea{
     border-radius: 10px;
-    background-color: rgb(177, 177, 177);
+    background-color: rgb(255, 255, 255);
     
 }
 ol{
@@ -62,7 +64,7 @@ li{
     font-size: 25;
     font-weight: bold;
     padding: 10px;
-    background-color: black;
+    background-color: rgb(243, 243, 243);
     margin-bottom: 10px;
     border-radius: 4px;
     display: flex;
@@ -70,24 +72,26 @@ li{
     margin: 5px 20rem;
     padding-bottom: 9px;
     display: grid;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .text{
     flex: 1;
     text-align: justify;
     font-size: 30px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 .delete-btn{
     padding: 8px 12px;
     font-size: 1rem;
     margin-left: 10px;
+    margin-bottom: 3px;
 }
 .to-do-list textarea{
     font-size: 20px;
     padding: 5px 16px;
     border: 2px solid rgb(193 193 193);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     margin: 0 20px;
     width: 29rem;
     border-radius: 1rem;
@@ -96,7 +100,7 @@ input[type="date"]{
     font-size: 20px;
     padding: 5px 16px;
     border: 2px solid rgb(193 193 193);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     margin: 0 10px;
     margin-bottom: 10px;
     width: 29rem;
@@ -104,12 +108,34 @@ input[type="date"]{
     font-size: 18px;
 }
 .description{
-    color: rgb(255, 255, 255);
+    color: rgb(134, 126, 126);
     margin-block-start: auto;
     padding-bottom: 1.5rem;
     
 
 }
 .due-date{
-    color: white;
+    color: rgb(17, 55, 223);
+}
+.completed-btn{
+    background-color: rgb(16, 89, 184);
+    padding: 8px 12px;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+.todo{
+    border: 1px solid white;
+    margin: 0 24rem;
+    background-color: rgb(72, 223, 52);
+    height: 28rem;
+    border-radius: 20px;
+    
+}
+.output{
+    margin-top: 5rem;
+}
+.check{
+    text-align: start;
+    align-items: end;
+    margin-right: auto;
 }

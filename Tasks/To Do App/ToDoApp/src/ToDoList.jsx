@@ -20,7 +20,7 @@ function ToDoList() {
 
   function addTask() {
     if (newTask.trim() !== "") {
-      setTask((t) => [...t, { task: newTask, description, dueDate }]);
+      setTask((t) => [...t, { task: newTask, description, dueDate, completed: false }]);
       setNewTask("");
       setDescription("");
       setDueDate(new Date());
@@ -33,39 +33,41 @@ function ToDoList() {
   }
 
   return (
-    <div className="to-do-list">
+  <div className="to-do-list">
+    <div className="todo">
       <h1>To Do List</h1>
 
       <div>
-        
-          <input
-            type="text"
-            placeholder="Enter a Task...."
-            value={newTask}
-            onChange={handleInputChange}
-          /><br></br>
+        <input
+          type="text"
+          placeholder="Enter a Task...."
+          value={newTask}
+          onChange={handleInputChange}
+        /><br></br>
 
-          <textarea
-            placeholder="Description"
-            value={description}
-            onChange={handleDescriptionChange}
-          /><br></br>
+        <textarea
+          placeholder="Description"
+          value={description}
+          onChange={handleDescriptionChange}
+        /><br></br>
 
-          <input
-            type="date"
-            value={dueDate.toLocaleDateString('en-CA')}
-            onChange={(e) => handleDateChange(new Date(e.target.value))}
-          /> <br></br>
+        <input
+          type="date"
+          value={dueDate.toLocaleDateString('en-CA')}
+          onChange={(e) => handleDateChange(new Date(e.target.value))}
+        /> <br></br>
 
-          <button className="Add-button" onClick={addTask}>
-            <span>ADD</span>
-          </button>
-        
+        <button className="Add-button" onClick={addTask}>
+          <span>Add</span>
+        </button>
       </div>
-
+      </div>
       <ol>
         {task.map((task, index) => (
-          <li key={index}>
+          <li key={index} className="output">
+            <input className="check"
+              type="checkbox"
+            />
             <span className="text">{task.task}</span>
             <span className="description">{task.description}</span>
             <span className="due-date">{task.dueDate.toLocaleDateString()}</span>
@@ -76,6 +78,7 @@ function ToDoList() {
               Delete
             </button>
           </li>
+          
         ))}
       </ol>
     </div>
