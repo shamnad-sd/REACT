@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+body {
+    background-image: url(assets/gran-turismo-7-racing-car-4k-wallpaper-uhdpaper.com-893@1@f.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.clock-container {
+    width: 100vh;
+}
+
+.clock {
+    font-size: 8vw;
+    color: rgb(30, 255, 0);
+    font-weight: bold;
+    font-family: "Handjet", sans-serif;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.836);
+    text-align: center;
+}
