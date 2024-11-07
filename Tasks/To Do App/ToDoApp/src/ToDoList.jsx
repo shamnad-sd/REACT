@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 function ToDoList() {
   const [task, setTask] = useState([]);
-  const [newTask, setNewTask] = useState("");
+  const [title, setNewTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [dueDate, setDueDate] = useState(new Date());
+  const [dueDate, setDueDate] = useState("");
 
   function handleInputChange(event) {
-    setNewTask(event.target.value);
+    setNewTitle(event.target.value);
   }
 
   function handleDescriptionChange(event) {
@@ -19,48 +19,48 @@ function ToDoList() {
   }
 
   function addTask() {
-    if (newTask.trim() !== "") {
-      setTask((t) => [...t, { task: newTask, description, dueDate, completed: false }]);
-      setNewTask("");
+    if (title.trim()) {
+      setTask([...task, { task: title, description, dueDate }]);
+      setNewTitle("");
       setDescription("");
-      setDueDate(new Date());
+      setDueDate("");
     }
   }
 
-  function deleteTask(index) {
-    const updatedTask = task.filter((_, i) => i !== index);
-    setTask(updatedTask);
+  function deleteTask(index){
+    task.splice(index);
+    setTask([...task]);
   }
-
   return (
-  <div className="to-do-list">
-    <div className="todo">
-      <h1>To Do List</h1>
+    <div className="to-do-list">
+      <div className="todo">
+        <h1>To Do List</h1>
 
-      <div>
-        <input
-          type="text"
-          placeholder="Enter a Task...."
-          value={newTask}
-          onChange={handleInputChange}
-        /><br></br>
+        <div>
+          <input
+            type="text"
+            placeholder="Enter a Task...."
+            value={title}
+            onChange={handleInputChange}
+          /><br></br>
 
-        <textarea
-          placeholder="Description"
-          value={description}
-          onChange={handleDescriptionChange}
-        /><br></br>
+          <textarea
+            placeholder="Description"
+            value={description}
+            onChange={handleDescriptionChange}
+          /><br></br>
 
-        <input
-          type="date"
-          value={dueDate.toLocaleDateString('en-CA')}
-          onChange={(e) => handleDateChange(new Date(e.target.value))}
-        /> <br></br>
+          <input
+            type="date"
+            value={dueDate}
+            onChange={(e) => handleDateChange(e.target.value)}
+          />
+         <br></br>
 
-        <button className="Add-button" onClick={addTask}>
-          <span>Add</span>
-        </button>
-      </div>
+          <button className="Add-button" onClick={addTask}>
+            <span>Add</span>
+          </button>
+        </div>
       </div>
       <ol>
         {task.map((task, index) => (
@@ -70,7 +70,7 @@ function ToDoList() {
             />
             <span className="text">{task.task}</span>
             <span className="description">{task.description}</span>
-            <span className="due-date">{task.dueDate.toLocaleDateString()}</span>
+            <span className="due-date">{task.dueDate}</span>
             <button
               className="delete-btn"
               onClick={() => deleteTask(index)}
@@ -78,7 +78,6 @@ function ToDoList() {
               Delete
             </button>
           </li>
-          
         ))}
       </ol>
     </div>
